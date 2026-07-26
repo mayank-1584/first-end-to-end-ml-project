@@ -1,7 +1,7 @@
 from setuptools import find_packages,setup
 from typing import List
 
-
+## for read all the requirements of code
 hypen_e_dot='-e .'
 def get_requirements(file_path:str)->List[str]:
     requirements=[]
