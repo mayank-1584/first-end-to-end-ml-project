@@ -8,6 +8,7 @@ from dataclasses import dataclass
 
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import datatransformationconfig
+from src.components.model_trainer import ModelTrainer 
 
 
 @dataclass 
@@ -53,4 +54,6 @@ if __name__ =="__main__":
 
 
     data_transformation = DataTransformation()
-    data_transformation.initiate_data_tarnsformation(train_data,test_data) 
+    train_arr,test_arr,_= data_transformation.initiate_data_tarnsformation(train_data,test_data)
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
