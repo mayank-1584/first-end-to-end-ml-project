@@ -74,11 +74,11 @@ class DataTransformation:
               numerical_columns = ["writing_score","reading_score"]
 
               #dropping the target column from train dataset
-              input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
+              input_feature_train_df=train_df.drop(columns=[target_column_name])
               target_feature_train_df=train_df[target_column_name]
 
                 #dropping the target dataset from test dataset
-              input_feature_test_df=test_df.drop(columns=[target_column_name],axis=1)
+              input_feature_test_df=test_df.drop(columns=[target_column_name])
               target_feature_test_df=test_df[target_column_name]
 
               logging.info(f"applying preprocessing for test and train dataframe")
